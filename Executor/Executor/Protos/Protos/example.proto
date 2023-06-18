@@ -1,0 +1,13 @@
+﻿syntax = "proto3";
+
+service Executor {
+  rpc ExecuteCommand (ExecuteCommandRequest) returns (ExecuteCommandResponse);
+}
+
+message ExecuteCommandRequest {
+  string execution_path = 1;
+}
+
+message ExecuteCommandResponse {
+  string result = 1;
+}
